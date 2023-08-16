@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import { ClerkProvider } from '@clerk/nextjs'
+// import { ClerkProvider } from '@clerk/nextjs'
 
 import { ToasterProvider } from '@/components/toaster-provider'
 import { ModalProvider } from '@/components/modal-provider'
@@ -27,7 +27,7 @@ export default function RootLayout({
     
 
   return (
-    <ClerkProvider>
+    // <ClerkProvider>
       <html lang="en" suppressHydrationWarning>
         {/* <CrispProvider /> */}
         <body className={font.className}>
@@ -37,6 +37,6 @@ export default function RootLayout({
           {children}
         </body>
       </html>
-    </ClerkProvider>
+    // </ClerkProvider>
   )
 }

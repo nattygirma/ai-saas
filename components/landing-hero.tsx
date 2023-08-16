@@ -2,13 +2,13 @@
 
 import TypewriterComponent from "typewriter-effect";
 import Link from "next/link";
-import { useAuth } from "@clerk/nextjs";
+// import { useAuth } from "@clerk/nextjs";
 
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
 export const LandingHero = () => {
-  const { isSignedIn } = useAuth();
+  // const { isSignedIn } = useAuth();
 
   return (
     <div className="text-white font-bold py-16 text-center space-y-5">
@@ -33,7 +33,7 @@ export const LandingHero = () => {
         Create content using AI 10x faster.
       </div>
       <div>
-        <Link href={isSignedIn ? "/dashboard" : "/sign-up"}>
+        <Link href={true ? "/dashboard" : "/sign-up"}>
           <Button variant="premium" className="md:text-lg p-4 md:p-6 rounded-full font-semibold">
             Start Generating For Free
           </Button>

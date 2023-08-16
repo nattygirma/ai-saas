@@ -1,4 +1,4 @@
-import { auth } from "@clerk/nextjs";
+// import { auth } from "@clerk/nextjs";
 import { NextResponse } from "next/server";
 import { Configuration, OpenAIApi } from "openai";
 
@@ -15,13 +15,13 @@ export async function POST(
   req: Request
 ) {
   try {
-    const { userId } = auth();
+    // const { userId } = auth();
     const body = await req.json();
     const { prompt, amount = 1, resolution = "512x512" } = body;
 
-    if (!userId) {
-      return new NextResponse("Unauthorized", { status: 401 });
-    }
+    // if (!userId) {
+    //   return new NextResponse("Unauthorized", { status: 401 });
+    // }
 
     if (!configuration.apiKey) {
       return new NextResponse("OpenAI API Key not configured.", { status: 500 });
